@@ -865,6 +865,7 @@ function loop(ts) {
   requestAnimationFrame(loop);
 }
 
+parseMap(MAPS[0]);   // 启动时先初始化地图，避免渲染循环访问空 grid 崩溃
 showTitle();
 updateHud();
 requestAnimationFrame(loop);
